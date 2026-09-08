@@ -1,5 +1,5 @@
 # linz/basemaps context
-> refreshed 2026-09-08 | upstream default: master @ 11271e7127c24d4ceb6aded57fe6a62541c1c2b9
+> refreshed 2026-09-09 | upstream default: master @ 11271e7127c24d4ceb6aded57fe6a62541c1c2b9
 
 ## Identity & policies
 - upstream: linz/basemaps, default branch master, primary language TypeScript (monorepo, lerna/nx)
@@ -28,9 +28,11 @@
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - `2026-08-19` PR #3656 (docs: fix broken GDAL link in cli-raster README) — pr-opened, merged upstream — GDAL link already fixed, do not re-touch
+- `2026-09-09` quick-start bundle `--output $PWD/` (should be a file path) — pr-opened (fork PR #10, fix/quick-start-bundle-output) — verified against action.bundle.ts (output is a file, default config/config.json); tied to upstream issue #3622; not yet upstream
 
 ## Mined gaps (discovered, not yet attempted)
 - `2026-09-08` docs/README.md "utlize" typo (should be "utilise" in NZ dialect) — status: proposed
 - `2026-09-08` docs/README.md duplicated "the basemaps service service" — status: proposed
 - `2026-09-08` docs/README.md basemaps-config link points to linz/basemaps (should be linz/basemaps-config) — status: proposed
 - `2026-09-08` trivial-fix pass (docs typos + broken links) — pr-opened (fork PR #9, docs/fix-doc-typos-and-links) — 10 files, 19 fixes, fork CI green; not yet upstream
+- `2026-09-09` docs/operator-guide/quick-start.md bundle `--output $PWD/` should be `--output $PWD/config.json` (EISDIR, issue #3622) — status: attempted (fork PR #10)
