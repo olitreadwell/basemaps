@@ -33,3 +33,4 @@
 - `2026-09-08` docs/README.md "utlize" typo (should be "utilise" in NZ dialect) — status: proposed
 - `2026-09-08` docs/README.md duplicated "the basemaps service service" — status: proposed
 - `2026-09-08` docs/README.md basemaps-config link points to linz/basemaps (should be linz/basemaps-config) — status: proposed
+- `2026-09-08` trivial-fix pass (docs typos + broken links) — pr-opened (fork PR #9, docs/fix-doc-typos-and-links) — 10 files, 19 fixes, fork CI green; not yet upstream
