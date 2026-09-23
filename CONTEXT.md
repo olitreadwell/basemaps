@@ -30,6 +30,7 @@
 - `2026-08-19` PR #3656 (docs: fix broken GDAL link in cli-raster README) — pr-opened, merged upstream — GDAL link already fixed, do not re-touch
 - `2026-09-09` quick-start bundle `--output $PWD/` (should be a file path) — pr-opened (fork PR #10, fix/quick-start-bundle-output) — verified against action.bundle.ts (output is a file, default config/config.json); tied to upstream issue #3622; not yet upstream
 - `2026-09-24` trivial-fix pass (typos: gebco `lastest`, sprites README `Refference`, lambda-tiler README `boudning`+`ont he`, version.bump.sh `formated`) — pr-opened (fork PR #13, docs/fix-typos-in-docs-and-scripts, 4 files 5 fixes) — new distinct pass after PR #9; conflict-free files; fork CI pending
+- `2026-09-24` trivial-fix pass (source-file comment/string typos, distinct from docs passes #9/#13) — pr-opened (fork PR #14, docs/fix-comment-typos, 10 files 18 fixes) — new distinct pass: codespell found 18 genuine misspellings in code comments, log messages and one CLI error message, all unclaimed by prior fork PRs #1/#2/#4/#9/#10/#13; no upstream PR touches any fixed string (dedupe checked open+closed); conflict-free files (avoids files touched by open fork PRs #4/#13); fork CI lint passed, build jobs pending
 
 ## Mined gaps (discovered, not yet attempted)
 - `2026-09-08` docs/README.md "utlize" typo (should be "utilise" in NZ dialect) — status: proposed
