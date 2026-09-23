@@ -31,7 +31,7 @@ export function splitWgs84MultiPolygon(multipoly: MultiPolygon): MultiPolygon {
     result.push(poly);
   }
 
-  // clip to between 180 and 520 degress and transpose to between -180 and 180
+  // clip to between 180 and 520 degrees and transpose to between -180 and 180
   for (const poly of clipMultipolygon(multipoly, NextWorldBounds)) {
     result.push(poly.map((ring) => ring.map((point) => [point[0] - 360, point[1]])));
   }
@@ -40,7 +40,7 @@ export function splitWgs84MultiPolygon(multipoly: MultiPolygon): MultiPolygon {
 }
 
 /**
- * Converts `multipoly` to WGS84 coordinates spliting any subpolygons that cross the anti-meridian
+ * Converts `multipoly` to WGS84 coordinates splitting any subpolygons that cross the anti-meridian
 
  * @param multipoly a collection of polygons in source coordinates
 
