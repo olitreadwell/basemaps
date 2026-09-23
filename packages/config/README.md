@@ -17,7 +17,7 @@ For LINZ's implementation of this configuration see [linz/basemaps-config](https
 
 ## Imagery Example
 
-[ConfigImagery](./src/config/imagery)
+[ConfigImagery](./src/config/imagery.ts)
 
 ```json
 {
