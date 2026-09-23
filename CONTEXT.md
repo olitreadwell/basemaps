@@ -1,5 +1,5 @@
 # linz/basemaps context
-> refreshed 2026-09-09 | upstream default: master @ 11271e7127c24d4ceb6aded57fe6a62541c1c2b9
+> refreshed 2026-09-24 | upstream default: master @ fc77e1e5d7e34b365d53a6d3b2014df5b4954abc
 
 ## Identity & policies
 - upstream: linz/basemaps, default branch master, primary language TypeScript (monorepo, lerna/nx)
@@ -29,6 +29,7 @@
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - `2026-08-19` PR #3656 (docs: fix broken GDAL link in cli-raster README) — pr-opened, merged upstream — GDAL link already fixed, do not re-touch
 - `2026-09-09` quick-start bundle `--output $PWD/` (should be a file path) — pr-opened (fork PR #10, fix/quick-start-bundle-output) — verified against action.bundle.ts (output is a file, default config/config.json); tied to upstream issue #3622; not yet upstream
+- `2026-09-24` trivial-fix pass (typos: gebco `lastest`, sprites README `Refference`, lambda-tiler README `boudning`+`ont he`, version.bump.sh `formated`) — pr-opened (fork PR #13, docs/fix-typos-in-docs-and-scripts, 4 files 5 fixes) — new distinct pass after PR #9; conflict-free files; fork CI pending
 
 ## Mined gaps (discovered, not yet attempted)
 - `2026-09-08` docs/README.md "utlize" typo (should be "utilise" in NZ dialect) — status: proposed
