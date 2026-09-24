@@ -80,7 +80,7 @@ function handleKindTrack(feature: VectorGeoFeature, logger: LogType): VectorGeoF
 
   // append/override tags
   feature.properties['subclass'] = subclass;
-  logger.trace({ subclass }, 'new/overidden tags');
+  logger.trace({ subclass }, 'new/overridden tags');
 
   // return feature
   logger.trace({}, 'HandleKindTrack:End');

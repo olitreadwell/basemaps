@@ -47,17 +47,17 @@ export function handleKindContours(feature: VectorGeoFeature, logger: LogType): 
   const elevation = feature.properties['elevation'];
   if (typeof elevation !== 'number') throw new Error('Elevation is not a number');
 
-  // if 'elevation' is divisble by 100 with no remainder
+  // if 'elevation' is divisible by 100 with no remainder
   if (elevation % 100 === 0) {
     // append 'type' property
     const type = 'index';
     feature.properties['type'] = type;
-    logger?.trace({ type }, 'new/overidden tags');
+    logger?.trace({ type }, 'new/overridden tags');
   } else {
     // override 'minzoom'
     const minzoom = 13;
     feature.tippecanoe.minzoom = minzoom;
-    logger?.trace({ minzoom }, 'overidden styles');
+    logger?.trace({ minzoom }, 'overridden styles');
   }
 
   logger?.trace({}, 'HandleKindContours:End');
@@ -96,7 +96,7 @@ export function handleKindPeak(feature: VectorGeoFeature, logger: LogType): Vect
 
     // append 'rank' property
     feature.properties['rank'] = rank;
-    logger?.trace({ rank }, 'new/overidden tags');
+    logger?.trace({ rank }, 'new/overridden tags');
   }
 
   logger?.trace({}, 'HandleKindPeak:End');

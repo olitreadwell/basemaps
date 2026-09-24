@@ -27,9 +27,9 @@ interface ImageryGet {
  * Get metadata around the imagery such as the source bounding box or the bounding box of the COGS
  *
  * @example
- * - /v1/imagery/:imageryId/source.geojson - Source boudning boxes
+ * - /v1/imagery/:imageryId/source.geojson - Source bounding boxes
  * - /v1/imagery/:imageryId/covering.geojson - Output tile bounding boxes
- * - /v1/imagery/:imageryId/cutline.geojson - Cutline used ont he imagery set
+ * - /v1/imagery/:imageryId/cutline.geojson - Cutline used on the imagery set
  * - /v1/imagery/:imageryId/collection.json - STAC Collection
  * - /v1/imagery/:imageryId/15-32659-21603.json - STAC Item
  */
