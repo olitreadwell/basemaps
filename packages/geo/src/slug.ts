@@ -130,7 +130,7 @@ export const LocationSlug = {
 
   /**
    * Parse a location into a lat lon zoom pair
-   * Validates that the location is withing the bounds
+   * Validates that the location is within the bounds
    *
    * - -90 <= lat <= 90
    * - -190 <= lon <= 180

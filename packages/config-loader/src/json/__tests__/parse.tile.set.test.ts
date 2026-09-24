@@ -45,7 +45,7 @@ describe('parse tile set', () => {
     ]);
   });
 
-  it('should fail with duplicate ouput names', () => {
+  it('should fail with duplicate output names', () => {
     const ret = zTileSetConfig.safeParse({
       type: 'raster',
       id: 'duplicate-output-names',

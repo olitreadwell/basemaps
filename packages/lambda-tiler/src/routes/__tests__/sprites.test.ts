@@ -56,7 +56,7 @@ describe('/v1/sprites', () => {
     assert.equal(res.header('cache-control'), 'public, max-age=604800, stale-while-revalidate=86400');
   });
 
-  it('should detect gziped files and set content-encoding', async () => {
+  it('should detect gzipped files and set content-encoding', async () => {
     await fsa.write(
       new URL('fake-s3://assets/sprites/topographic.json'),
       gzipSync(Buffer.from(JSON.stringify({ test: true }))),

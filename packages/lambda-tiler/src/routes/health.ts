@@ -104,7 +104,7 @@ async function validateRasterTile(tileSet: ConfigTileSetRaster, test: TestTile, 
   const outputBuffer = Buffer.alloc(testImgBuffer.length);
   const missMatchedPixels = PixelMatch(testImgBuffer, resImgBuffer, outputBuffer, TileSize, TileSize);
   if (missMatchedPixels) {
-    /** Uncomment this to overwite the expected files */
+    /** Uncomment this to overwrite the expected files */
     // await updateExpectedTile(test, response._body as Buffer, outputBuffer);
     req.log.error({ missMatchedPixels, projection: test.tileMatrix.identifier, xyz: test.tile }, 'Health:MissMatch');
     throw new LambdaHttpResponse(500, 'TileSet does not match.');

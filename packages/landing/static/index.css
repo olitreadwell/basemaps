@@ -223,7 +223,7 @@ button {
 
 /*
 The additional #layer-selector id selector is needed to ensure these styles
-have higher specifity than the default styles of the react-select component
+have higher specificity than the default styles of the react-select component
 */
 #layer-selector .layer-selector__group-heading {
   font-size: 90%;

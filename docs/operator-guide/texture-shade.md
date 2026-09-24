@@ -57,7 +57,7 @@ cd n1
 # Grab required files
 aws s3 cp s3://linz-basemaps-source/Geographx-NZ-DEM Geographx-NZ-DEM --recursive
 
-# Craete a VRT
+# Create a VRT
 gdal_docker gdalbuildvrt Geographx-NZ-DEM-FLT.vrt Geographx-NZ-DEM/*.tif
 
 # texture requires a FLT file

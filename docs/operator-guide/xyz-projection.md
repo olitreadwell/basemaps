@@ -29,7 +29,7 @@ To convert an example point, such as the [Beehive](<https://en.wikipedia.org/wik
 
 Converting to [NZTM2000 EPSG:2193](https://epsg.io/2193) `x: 1748795.82...`, `y: 5428814.899...`
 
-Using NZTM2000Quad to convert to pixel cooridantes of tile z:0, x:0, y:0 yields `x:128.0001..., y:127.999...`
+Using NZTM2000Quad to convert to pixel coordinates of tile z:0, x:0, y:0 yields `x:128.0001..., y:127.999...`
 
 ![Beehive NZTM2000Quad](./static/projection_nztm2000quad_0_0_0.webp)
 
