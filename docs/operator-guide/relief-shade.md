@@ -37,10 +37,10 @@ Base Image:
 gdaldem hillshade:
 ![Aerial imagery](./static/relief__base.webp)
 
-Using default color ramp applys whites
+Using default color ramp applies whites
 ![Lighten](./static/relief__lighten.webp)
 
-Custom color ramp which only applys the darken
+Custom color ramp which only applies the darken
 
 ```
 nv      0       0       0       0

@@ -60,7 +60,7 @@ export interface BaseConfigWriteableObject<T extends ConfigBase> extends Basemap
 
 export const ConfigId = {
   /**
-   * Prefix a dynamoDb id with the provided prefix if it doesnt already start with it.
+   * Prefix a dynamoDb id with the provided prefix if it doesn't already start with it.
    */
   prefix(prefix: ConfigPrefix, id: string): string {
     if (id === '') return id;

@@ -149,7 +149,7 @@ Then using the basemaps CLI a config can be bundled, assuming $PWD is the same f
 ```bash
 docker run --rm \
   -v $PWD:$PWD \
-  -it ghcr.io/linz/basemaps/cli:latest bundle --config $PWD/config/ --output $PWD/
+  -it ghcr.io/linz/basemaps/cli:latest bundle --config $PWD/config/ --output $PWD/config.json
 ```
 
 This generates a `config.json` which has all the information needed to start the server
