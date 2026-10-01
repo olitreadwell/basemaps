@@ -61,14 +61,14 @@ export class LayerSwitcherDropdown extends Component<unknown, LayerSwitcherDropd
 
     void Config.map.layers.then((layers) => {
       this.setState({ layers });
-      // This needs to run on next tick or the sate will not have updated
+      // This needs to run on next tick or the state will not have updated
       setTimeout(() => this.ensurePipelineSet(), 10);
     });
 
     this._events.push(
       Config.map.on('layer', () => {
         this.setState({ currentLayer: Config.map.layerKey });
-        // This needs to run on next tick or the sate will not have updated
+        // This needs to run on next tick or the state will not have updated
         setTimeout(() => this.ensurePipelineSet(), 10);
       }),
       Config.map.on('tileMatrix', () => this.forceUpdate()),

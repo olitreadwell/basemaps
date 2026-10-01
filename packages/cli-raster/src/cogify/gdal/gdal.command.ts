@@ -13,7 +13,7 @@ const isPowerOfTwo = (x: number): boolean => (x & (x - 1)) === 0;
 /**
  * Topographic mapsheets are rendered generally at 1:600 dpi,
  *
- * A topo50 mapsheet 1:600dpi does not perfectly align to full pixels and approximatly 1.7 pixels
+ * A topo50 mapsheet 1:600dpi does not perfectly align to full pixels and approximately 1.7 pixels
  * of empty space is rendered at the edge of every mapsheet.
  *
  */
@@ -48,7 +48,7 @@ export function gdalBuildVrtWarp(
     command: 'gdalwarp',
     args: [
       ['-of', 'vrt'], // Output as a VRT
-      '-multi', // Mutithread IO
+      '-multi', // Multithread IO
       ['-wo', 'NUM_THREADS=ALL_CPUS'], // Multithread the warp
       ['-s_srs', Epsg.get(sourceProjection).toEpsgString()], // Source EPSG
       ['-t_srs', tileMatrix.projection.toEpsgString()], // Target EPSG
@@ -194,7 +194,7 @@ export function gdalBuildTopoRasterCommands(
     command: 'gdal_translate',
     output: targetTiff,
     args: [
-      ['-q'], // Supress non-error output
+      ['-q'], // Suppress non-error output
       ['-stats'], // Force stats (re)computation
       ['-of', 'COG'], // Output format
       ['-srcwin', 0, PixelTrimTop, width - PixelTrimRight, height - PixelTrimTop],

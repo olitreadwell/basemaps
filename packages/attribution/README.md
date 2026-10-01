@@ -1,6 +1,6 @@
 # @basemaps/attribution
 
-Library to determine to applicable attribution for a given extent and zoom level.
+Library to determine the applicable attribution for a given extent and zoom level.
 
 ## Usage
 
@@ -18,7 +18,7 @@ const attributions = await Attribution.load(
 // Find all imagery sets inside the following bounding box
 const attrList = attributions.filter([144.7377202, -45.8938181, 195.62639, -37.65336], 6);
 
-// Convert the attrubtion list to a human readable description
+// Convert the attribution list to a human readable description
 const description = attributions.renderList(attrList);
 // "NZ 10m Satellite Imagery (2020-2021) & GEBCO 2020 Grid"
 ```

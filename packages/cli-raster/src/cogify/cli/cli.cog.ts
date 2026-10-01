@@ -188,7 +188,9 @@ export const BasemapsCogifyCreateCommand = command({
           const cutline = await CutlineOptimizer.loadFromLink(cutlineLink, tileMatrix);
           if (isTopoStacItem(item)) {
             if (sourceFiles.length !== 1) {
-              throw new Error('Topo MapSheet procesing is limited to one input file, found: ' + sourceLocations.length);
+              throw new Error(
+                'Topo MapSheet processing is limited to one input file, found: ' + sourceLocations.length,
+              );
             }
             const width = sourceFiles[0]['linz_basemaps:source_width'];
             const height = sourceFiles[0]['linz_basemaps:source_height'];
