@@ -49,7 +49,7 @@ This API works with any client that supports [TileJSON](https://github.com/mapbo
 
 ## Tile matrix sets
 
-LINZ Basemap APIs are provided in two output tiling schemes - WGS84 Web Mercator Quad (EPSG:3857) and NZTM2000 Quad (ESPG:2193). Each has its own tile matrix set that describes the zoom levels, scale and resolution for the images that are returned.
+LINZ Basemap APIs are provided in two output tiling schemes - WGS84 Web Mercator Quad (EPSG:3857) and NZTM2000 Quad (EPSG:2193). Each has its own tile matrix set that describes the zoom levels, scale and resolution for the images that are returned.
 
 **LINZ Topographic Basemap is only supported in WGS84 Web Mercator Quad (EPSG:3857)**
 
@@ -69,7 +69,7 @@ This tile set presents New Zealand at its finest. It is most useful for New Zeal
 
 Rate limits apply to Standard API access only, not Developer API access.
 
-Rate liming applies to all API clients, at the API token and IP address level.
+Rate limiting applies to all API clients, at the API token and IP address level.
 
 | Access level     | Request limit per minute | Request limit per month | API key nominated site restriction |
 | ---------------- | ------------------------ | ----------------------- | ---------------------------------- |
