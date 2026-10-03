@@ -378,7 +378,7 @@
         },
         "example": "topographic"
       },
-      "tileMatrixVecotor": {
+      "tileMatrixVector": {
         "name": "tileMatrix",
         "in": "path",
         "description": "Supported Vector Tiling schemes",
