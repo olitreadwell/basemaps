@@ -11,7 +11,7 @@ Utility functions for working with GeoJSON multi polygons and bounding boxes. In
 ```javascript
 import { Wgs84 } from '@linzjs/geojson';
 
-assert(Wgs84.normLon(-163.12345 - 720) == -163.12345;
+assert(Wgs84.normLon(-163.12345 - 720) == -163.12345);
 
 assert(Wgs84.crossesAM(-175, 175));
 

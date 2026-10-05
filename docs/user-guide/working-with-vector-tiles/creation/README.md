@@ -4,7 +4,7 @@ Our system generates vector tiles and stores them together as an `MBTiles` file.
 
 !!! info "What is an `MBTiles` file?"
 
-    An [`MBTiles`][1] file is a file format and specification for storing vector tiles in the form of a single SQLite database. You can think of it as a filing cabinent that stores vector tiles in an efficient, organised way.
+    An [`MBTiles`][1] file is a file format and specification for storing vector tiles in the form of a single SQLite database. You can think of it as a filing cabinet that stores vector tiles in an efficient, organised way.
 
 ## Our Vector Tile Pipeline
 

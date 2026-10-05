@@ -15,7 +15,7 @@ Bundle config files into config bundle json from a given config path. This is ma
 Create cotar file for the config assets. Creates a cotar file from a directory. This is mainly use for [linz/basemaps-config](https://github.com/linz/basemaps-config) CICD process to create cotar file.
 
 ```bash
-./build/bin.js bundle-assets --assets assets/ --output output/
+./build/bin.js bundle-assets --assets assets/ --output output.tar.co
 ```
 
 ## Usage -- Import
@@ -31,5 +31,5 @@ Import all configs from a bundled config.json into dynamo db from a given config
 Create a Basemaps configuration from a path to imagery. This is mainly use for [linz/basemaps-config](https://github.com/linz/basemaps-config) repository ci/cd process to deploy the config changes into DynamoDB.
 
 ```bash
-./build/bin.js create-config --path path/ --target target/
+./build/bin.js create-config path/ --target target/
 ```

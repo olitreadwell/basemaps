@@ -180,7 +180,7 @@ export async function createTileCover(ctx: TileCoverContext): Promise<TileCoverR
 
     // Ensure the bounds are slipped as multipolygons when crossing the antimeridian
     const wsg84Bounds = multiPolygonToWgs84([scaledBounds.toPolygon()], projection.toWgs84, true);
-    // Covert the wsg84 bounds back to the source projection
+    // Convert the wsg84 bounds back to the source projection
     const tileBounds = Projection.get(EpsgCode.Wgs84).projectMultipolygon(
       wsg84Bounds,
       Projection.get(ctx.imagery.projection),

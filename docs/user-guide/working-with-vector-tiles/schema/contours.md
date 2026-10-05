@@ -1,6 +1,6 @@
 # contours
 
-This layer contains contour line features represented as `LineString` geometries, and height peak features represents as `Point` geometries.
+This layer contains contour line features represented as `LineString` geometries, and height peak features represented as `Point` geometries.
 
 !!! example "Custom"
 

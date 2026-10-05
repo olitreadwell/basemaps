@@ -8,7 +8,7 @@ import * as fs from 'fs';
 
 const parentPackage = JSON.parse(fs.readFileSync('../package.json').toString());
 
-// Find the exact version of a package in the package-lock lock
+// Find the exact version of a package in the package-lock
 export function getPackageVersion(packageName) {
   const parentLock = JSON.parse(fs.readFileSync('../../../package-lock.json').toString());
   return parentLock.packages['node_modules/' + packageName].version;
