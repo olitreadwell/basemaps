@@ -13,7 +13,7 @@ export abstract class BaseCommandLine extends CommandLineParser {
   extraVerbose = this.defineFlagParameter({
     parameterLongName: '--vv',
     parameterShortName: '-V',
-    description: 'Show extra extra logging detail',
+    description: 'Show extra logging detail',
   });
 
   toolName: string;

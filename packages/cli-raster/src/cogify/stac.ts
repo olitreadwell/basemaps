@@ -120,7 +120,7 @@ export type GdalResampling = 'nearest' | 'bilinear' | 'cubic' | 'cubicspline' | 
 export type CogifyStacCollection = StacCollection;
 
 /**
- * Is the the provided stac item a topographic map sheet creation request or a generic cog creation request
+ * Is the provided stac item a topographic map sheet creation request or a generic cog creation request
  * @returns true if a linz:map_sheet is found false otherwise.
  */
 export function isTopoStacItem(x: CogifyStacItem | TopoStacItem): x is TopoStacItem {

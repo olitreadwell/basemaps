@@ -9,7 +9,7 @@ const cmd = new Command('echo', { container: 'ubuntu', tag: 'latest' });
 
 // Spawn a docker container and run `echo hello world`
 await cmd.create().arg('Hello World').run(); // {stdout: "Hello World\n"}
-// Spawn a echo process and run `echo hello world`
+// Spawn an echo process and run `echo hello world`
 await cmd.create({ useDocker: false }).arg('Hello World').run(); // {stdout: "Hello World\n"}
 ```
 

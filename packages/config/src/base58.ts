@@ -1,4 +1,4 @@
-/** This file is able to be directly imported in the web, soo all nodejs logic is in ./base58.node.ts */
+/** This file is able to be directly imported in the web, so all nodejs logic is in ./base58.node.ts */
 import baseX from 'base-x';
 
 const Base58 = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';

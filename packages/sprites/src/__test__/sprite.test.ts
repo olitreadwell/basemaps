@@ -47,7 +47,7 @@ describe('Sprites', () => {
     assert.equal(hashB, 'ksdwiwVlJE6b8jH6IRDDTHNdjaJG0_XQy3z4g3mOPf4');
   });
 
-  it('should generate sprites from from examples including images', async () => {
+  it('should generate sprites from examples including images', async () => {
     const baseSprites = join(__dirname, '../../static/sprites');
 
     ValidExtensions.clear();

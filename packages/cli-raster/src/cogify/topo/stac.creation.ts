@@ -123,8 +123,8 @@ export function createStacItems(
 
     // add link referencing this StacItem's origin file that will live in the topo[50/250] directory
     latestStacItem.links.push({
-      // directory into which we save this StacItem file: <target>/<mapSeries>_latest/<resolution>/<espg>/[latest_stac_item]
-      // directory inside which we save this StacItem's origin file: <target>/<mapSeries>/<resolution>/<espg>/[origin_stac_item]
+      // directory into which we save this StacItem file: <target>/<mapSeries>_latest/<resolution>/<epsg>/[latest_stac_item]
+      // directory inside which we save this StacItem's origin file: <target>/<mapSeries>/<resolution>/<epsg>/[origin_stac_item]
       //
       // `../../../` takes us up to the <target> directory
       href: `../../../${mapSeries}/${resolution}/${item.epsg.code}/${item.mapCode}_${item.version}.json`,

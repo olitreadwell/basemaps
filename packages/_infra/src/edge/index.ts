@@ -125,7 +125,7 @@ export class EdgeStack extends cdk.Stack {
       };
     }
 
-    // This value needs to be manually set after the first deployment into a business Cloudfront plan
+    // This value needs to be manually set after the first deployment into a business CloudFront plan
     const webAclId = StringParameter.valueFromLookup(this, '/linz/basemaps/cloudfront-webacl-arn', '');
 
     this.distribution = new cf.Distribution(this, 'Distribution', {

@@ -55,7 +55,7 @@ Maputnik is a free, open-source visual editor for creating and modifying map sty
      https://basemaps.linz.govt.nz/v1/styles/topographic.json?api=YOUR_API_KEY
      ```
 
-   - Open the Style settings and switch the Style Renderer from MapLibreGL JS to Open Layers (experimental)
+   - Open the Style settings and switch the Style Renderer from MapLibreGL JS to OpenLayers (experimental)
 
 #### Example Tutorial: Customizing Contour Lines
 
