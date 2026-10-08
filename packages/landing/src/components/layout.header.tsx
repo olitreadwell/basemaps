@@ -63,9 +63,17 @@ export class Header extends Component<unknown, HeaderState> {
           <div className="LuiHeaderV2-col">
             <div className="LuiHeaderV2-menu-item">
               <div className="LuiHeaderV2-menu-icon">
-                <i className="material-icons-round md-36" onClick={this.menuToggle} style={{ cursor: 'pointer' }}>
-                  {isMenuOpen ? 'close' : 'menu'}
-                </i>
+                <button
+                  type="button"
+                  className="menu-toggle-button"
+                  onClick={this.menuToggle}
+                  aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                  aria-expanded={isMenuOpen}
+                >
+                  <i className="material-icons-round md-36" aria-hidden="true">
+                    {isMenuOpen ? 'close' : 'menu'}
+                  </i>
+                </button>
               </div>
             </div>
           </div>
