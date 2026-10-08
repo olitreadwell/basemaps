@@ -76,7 +76,7 @@ export const QuadKey = {
 
   /**
    * Convert a tile location to a quadkey
-   * @param tile tile to covert
+   * @param tile tile to convert
    */
   fromTile(tile: Tile): string {
     const { x, y, z } = tile;
@@ -95,7 +95,7 @@ export const QuadKey = {
    * Compare quadkeys such that using with sort will result in a list from Biggest coverage to smallest.
    * @param a
    * @param b
-   * @retun < 0, = 0 or > 0
+   * @return < 0, = 0 or > 0
    */
   compareKeys(a: string, b: string): number {
     return a === b ? 0 : a.length === b.length ? (a < b ? -1 : 1) : a.length - b.length;

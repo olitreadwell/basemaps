@@ -212,7 +212,7 @@ export class ConfigJson {
       if (record.title && record.title !== layer.title) {
         logger.warn(
           { layer: layer.name, imageryTitle: record.title, layerTitle: layer.title },
-          'Imagery:Title:Missmatch',
+          'Imagery:Title:Mismatch',
         );
       }
       record.title = layer.title;
@@ -221,7 +221,7 @@ export class ConfigJson {
         if (record.category && record.category !== layer.category) {
           logger.warn(
             { layer: layer.name, imageryCategory: record.category, layerCategory: layer.category },
-            'Imagery:Category:Missmatch',
+            'Imagery:Category:Mismatch',
           );
         }
         record.category = layer.category;
@@ -306,8 +306,8 @@ export class ConfigJson {
 
     const cotar = await Cotar.fromTar(fsa.source(targetOverviews));
 
-    // When the cotars are made a WMTSCapabilties is added so it easy to view in something like QGIS
-    // We can use the WMTSCapabitities to figure out the tileMatrix and zoom levels
+    // When the cotars are made a WMTSCapabilities is added so it easy to view in something like QGIS
+    // We can use the WMTSCapabilities to figure out the tileMatrix and zoom levels
     const wmtsRaw = await cotar.get('WMTSCapabilities.xml');
     if (wmtsRaw == null) return;
 
@@ -320,7 +320,7 @@ export class ConfigJson {
   }
 }
 
-/** Attempt to parse a cotar WMTSCapabilties to figure out what zoom levels are applicable */
+/** Attempt to parse a cotar WMTSCapabilities to figure out what zoom levels are applicable */
 export function zoomLevelsFromWmts(
   wmts: string,
   tileMatrix: TileMatrixSet,

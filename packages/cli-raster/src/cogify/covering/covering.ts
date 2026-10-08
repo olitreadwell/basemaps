@@ -81,7 +81,7 @@ export function createCovering(ctx: CoveringContext): Tile[] {
 
   // Reduce the complexity of the cutline applied polygon to same as one pixel at the covering resolution
   // this is a approximation and can cause some false positive/negative tiles.
-  // but signficiantly improves performance of finding tile covers
+  // but significantly improves performance of finding tile covers
   ctx.metrics?.start('cutline:simplify');
   const onePixelAtOverviewResolution = ctx.tileMatrix.pixelScale(ctx.targetZoom);
   const onePixelAtBaseResolution = ctx.tileMatrix.pixelScale(ctx.baseZoom);

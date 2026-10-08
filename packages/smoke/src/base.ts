@@ -5,7 +5,7 @@ import ulid from 'ulid';
 /** Fresh API Key to use */
 const apiKey = 'c' + ulid.ulid().toLowerCase().slice(0, 22) + 'test';
 
-/** Http headers required to trigger CORS */
+/** HTTP headers required to trigger CORS */
 const Cors = { origin: 'https://example.com' };
 
 /** Host that is being tested */

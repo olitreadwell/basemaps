@@ -32,7 +32,7 @@ export const CreateConfigCommand = command({
     host: option({
       type: Url,
       long: 'host',
-      description: 'Which host to use as the base for for preview generation links',
+      description: 'Which host to use as the base for preview generation links',
       defaultValue: () => new URL('https://basemaps.linz.govt.nz'),
       defaultValueIsSerializable: true,
     }),

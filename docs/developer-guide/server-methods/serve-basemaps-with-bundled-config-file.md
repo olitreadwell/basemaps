@@ -12,7 +12,7 @@ This guide shows you how to configure and run the **basemaps/server** package us
 
         !!! abstract "Path"
 
-            To use the exisiting config file stored in the **LINZ AWS S3** bucket, note the following path:
+            To use the existing config file stored in the **LINZ AWS S3** bucket, note the following path:
 
             === "`CONFIG_FILE`"
 
@@ -50,7 +50,7 @@ This guide shows you how to configure and run the **basemaps/server** package us
 
         !!! abstract "Path"
 
-            To use the exisiting assets archive stored in the **LINZ AWS S3** bucket, note the following path:
+            To use the existing assets archive stored in the **LINZ AWS S3** bucket, note the following path:
 
             === "`ASSETS_ARCHIVE`"
 

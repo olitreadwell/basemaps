@@ -41,7 +41,7 @@ export const TileSetVector: ConfigTileSetVector = {
   category: 'Basemap',
   layers: [
     {
-      3857: 's3://linz-basemaps/01G7WQMGHB7V946M0YWJJBZ6DW/topopgraphic.tar.co',
+      3857: 's3://linz-basemaps/01G7WQMGHB7V946M0YWJJBZ6DW/topographic.tar.co',
       title: 'Vector tiles',
       category: 'Vector Tiles',
       name: 'Vector tiles',

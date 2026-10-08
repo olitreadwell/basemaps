@@ -56,7 +56,7 @@ export class Updater<S extends BaseConfig = BaseConfig> {
 
   invalidatePath(): string {
     if (this.prefix === ConfigPrefix.Provider) return '/v1/*/WMTSCapabilities.xml';
-    else if (this.prefix === ConfigPrefix.Style) return `/v1/tiles/togographic/style/${this.config.id.slice(3)}.json`;
+    else if (this.prefix === ConfigPrefix.Style) return `/v1/tiles/topographic/style/${this.config.id.slice(3)}.json`;
     else return `/v1/tiles/${this.config.id.slice(3)}/*`;
   }
 
