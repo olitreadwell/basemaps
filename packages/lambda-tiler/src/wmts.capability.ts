@@ -262,11 +262,11 @@ export interface WmtsCapabilitiesParams {
 export class WmtsCapabilities extends WmtsBuilder {
   minZoom = 0;
   maxZoom = 32;
-  /** Wmts tileSet layer and imagery layers information */
+  /** WMTS tileSet layer and imagery layers information */
   tileSet?: ConfigTileSet;
   configLayers?: ConfigLayer[];
 
-  /** Wmts Provider information */
+  /** WMTS Provider information */
   provider?: WmtsProvider;
 
   constructor(params: WmtsBuilderParams) {

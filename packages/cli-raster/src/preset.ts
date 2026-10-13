@@ -113,7 +113,7 @@ export type BandPresetName = keyof typeof BandPresets;
 const allPresets = Object.keys(BandPresets);
 
 export const AllowedPresets: Record<PresetName, BandPresetName[]> = {
-  // Webp is only suitable for RGB(A) images
+  // WebP is only suitable for RGB(A) images
   [webP.name]: ['rgba'],
   [webP80.name]: ['rgba'],
   [lerc1mm.name]: allPresets,

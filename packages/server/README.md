@@ -44,7 +44,7 @@ Usage with basemaps config, you will need access to basemaps' imagery cache
 please contact basemaps@linz.govt.nz if you need access.
 
 ```bash
-git clone github.com/linz/basemaps-config
+git clone https://github.com/linz/basemaps-config
 
 bmc bundle --config basemaps-config/config --output config.bundle.json
 basemaps-server --config config.bundle.json

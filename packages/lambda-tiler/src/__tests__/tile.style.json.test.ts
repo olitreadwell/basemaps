@@ -125,7 +125,7 @@ describe('TileStyleJson', () => {
     layers: [],
   };
 
-  it('should cover raster style Json without metadata, sprite and glyphs', () => {
+  it('should cover raster style JSON without metadata, sprite and glyphs', () => {
     const apiKey = 'abc123';
     const converted = structuredClone(rasterStyleJson);
     setStyleUrls(rasterStyleJson, GoogleTms, apiKey, null);

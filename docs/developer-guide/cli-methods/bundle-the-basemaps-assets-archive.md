@@ -136,7 +136,7 @@ The contents of your `$ASSETS_DIR/assets/sprites` directory should look similar 
 Use the following command to bundle the `basemaps` assets archive:
 
 ```bash
-node $BM_CLI_BUILD/bin.js bundle-assets \
+node $BM_CLI_BUILD/bin.js config bundle-assets \
     --assets $ASSETS_DIR \
     --output assets.bundle.tar.co \
 ```

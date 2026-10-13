@@ -30,7 +30,7 @@ export function getTileGridStyle(tileMatrixSet: TileMatrixSet, cfg: TileGridStyl
 }
 
 /**
- * Covert map Bounds to tileMatrix BBox
+ * Convert map Bounds to tileMatrix BBox
  */
 export function mapToBoundingBox(map: maplibregl.Map, zoom: number, tileMatrix: TileMatrixSet): BBox {
   const bounds = map.getBounds();
@@ -38,7 +38,7 @@ export function mapToBoundingBox(map: maplibregl.Map, zoom: number, tileMatrix: 
   const neLocation = { lon: bounds.getEast(), lat: bounds.getNorth(), zoom: zoom };
   const swCoord = locationTransform(swLocation, GoogleTms, tileMatrix);
   const neCoord = locationTransform(neLocation, GoogleTms, tileMatrix);
-  // Truncate all coordiantes to 8 DP (~1mm)
+  // Truncate all coordinates to 8 DP (~1mm)
   const bbox: BBox = [
     Math.round(swCoord.lon * 1e8) / 1e8,
     Math.round(swCoord.lat * 1e8) / 1e8,

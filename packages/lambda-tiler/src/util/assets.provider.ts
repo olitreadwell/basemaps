@@ -14,7 +14,7 @@ export class AssetProvider {
    *
    * /home/blacha/config/build/assets # Local File
    * /home/blacha/config/build/assets.tar.co # Local Cotar
-   * s3://linz-baesmaps/assets/ # Remote location
+   * s3://linz-basemaps/assets/ # Remote location
    * s3://linz-basemaps/assets/assets-b4ff211a.tar.co # Remote Cotar
    */
 

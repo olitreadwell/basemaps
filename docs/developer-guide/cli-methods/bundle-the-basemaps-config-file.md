@@ -61,7 +61,7 @@ Clone the [**linz/basemaps-config**][bm_config_repo] repository to your machine.
 Use the following command to bundle the `basemaps` config file:
 
 ```bash
-node $BM_CLI_BUILD/bin.js bundle \
+node $BM_CLI_BUILD/bin.js config bundle \
     --config $BM_CONFIG_REPO/config \
     --output config.bundle.json \
     --cache s3://linz-basemaps-staging/basemaps-config/cache/

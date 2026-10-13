@@ -43,7 +43,7 @@ interface ProjJson {
   };
 }
 /**
- * Find a zoom level that has approximatly the same bounds as the bounds of the source projection,
+ * Find a zoom level that has approximately the same bounds as the bounds of the source projection,
  * because the WebMercatorQuad covers the entire world most other projections do not work well, outside
  * their own bounds try and find a zoom level that does not overflow the bounds too much
  *

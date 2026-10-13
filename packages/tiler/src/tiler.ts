@@ -133,7 +133,7 @@ export class Tiler {
       composition.resize = { width: target.width, height: target.height, scaleX, scaleY, scale: scaleFactor };
     }
 
-    // If the output XYZ tile needs a piece of a COG tile, extract the speicific
+    // If the output XYZ tile needs a piece of a COG tile, extract the specific
     // Bounding box
     if (
       tileBounds.y !== 0 ||

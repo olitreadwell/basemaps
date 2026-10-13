@@ -173,7 +173,6 @@ export class BathyMaker {
         '-of',
         'GTiff',
         // Files need to be converted to Float32 to fix a weird outline bug with the resampling
-        // see https://github.com/linz/basemaps-team/issues/241
         '-ot',
         'Float32',
         s3ToVsis3(this.inputPath),
