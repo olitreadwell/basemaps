@@ -74,8 +74,8 @@ async function buildTar(input: URL, output: string, logger: LogType): Promise<st
   logger.info({ output: outputTar, files: files.length }, 'Tar:Create');
 
   for (const file of files) {
-    const filePath = file.href.replace(input.href, '');
-    if (filePath.startsWith('/')) filePath.slice(1); // Remove the leading '/'
+    // A leading '/' is introduced when the input path does not have a trailing slash
+    const filePath = file.href.replace(input.href, '').replace(/^\//, '');
     await tarBuilder.write(decodeURI(filePath), await fsa.read(file));
   }
 
