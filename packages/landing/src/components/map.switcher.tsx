@@ -1,6 +1,5 @@
 import maplibre from 'maplibre-gl';
-import type { ReactNode } from 'react';
-import { Component } from 'react';
+import { Component, KeyboardEvent, ReactNode } from 'react';
 
 import { Config, GaEvent, gaEvent } from '../config.js';
 import { MapConfig } from '../config.map.js';
@@ -103,10 +102,28 @@ export class MapSwitcher extends Component {
     window.history.pushState(null, '', `?${MapConfig.toUrl(Config.map)}`);
   };
 
+  onKeyDown = (e: KeyboardEvent<HTMLDivElement>): void => {
+    // The switcher is a div, so it does not fire click on Enter/Space like a button does.
+    // Handle those keys so keyboard users can activate it too.
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.switchLayer();
+    }
+  };
+
   override render(): ReactNode {
     const layerTitle = `Switch map to ${this.getStyleType().layerId}`;
     return (
-      <div id="map-switcher" className="map-switcher" onClick={this.switchLayer} title={layerTitle}>
+      <div
+        id="map-switcher"
+        className="map-switcher"
+        role="button"
+        tabIndex={0}
+        aria-label={layerTitle}
+        title={layerTitle}
+        onClick={this.switchLayer}
+        onKeyDown={this.onKeyDown}
+      >
         <div id="map-switcher-map" style={{ width: '100%', height: '100%', pointerEvents: 'none' }} />
       </div>
     );
