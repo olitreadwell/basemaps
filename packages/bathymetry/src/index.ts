@@ -75,7 +75,7 @@ class CreateAction extends CommandLineAction {
       throw new Error(
         'Unknown tile matrix set: ' +
           tileMatrixInput +
-          ' Aviaiable tile matrix sets: ' +
+          ' Available tile matrix sets: ' +
           TileMatrixSets.All.map((c) => c.identifier).join(', '),
       );
     }

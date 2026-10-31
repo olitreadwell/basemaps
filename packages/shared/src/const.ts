@@ -39,7 +39,7 @@ export const Env = {
   /** AWS role config bucket */
   AwsRoleConfigPath: 'AWS_ROLE_CONFIG_PATH',
 
-  /** Github api token */
+  /** GitHub api token */
   GitHubToken: 'GITHUB_API_TOKEN',
 
   /**

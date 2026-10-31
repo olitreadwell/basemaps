@@ -36,10 +36,10 @@ We support three common standards for web mapping.
 
 There are a few core concepts within our technical documentation that you should check out before you start mapping.
 
-- [Access levels](./technical-documentation.md/#api-access-levels)
-- [Rate limiting](./technical-documentation.md/#rate-limiting)
-- [Response codes](./technical-documentation.md/#response-codes)
-- [Data attribution](./technical-documentation.md/#data-attribution)
+- [Access levels](./technical-documentation.md#api-access-levels)
+- [Rate limiting](./technical-documentation.md#rate-limiting)
+- [Response codes](./technical-documentation.md#response-codes)
+- [Data attribution](./technical-documentation.md#data-attribution)
 
 ### Stay informed
 

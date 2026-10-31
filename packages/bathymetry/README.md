@@ -2,7 +2,7 @@
 
 ## Bathymetry creation
 
-This process takes batheymetric data from [GEBCO](https://www.gebco.net/) and converts it into a colorized hillshaded geotiff.
+This process takes bathymetric data from [GEBCO](https://www.gebco.net/) and converts it into a colorized hillshaded geotiff.
 
 ![](./images/bathyoutput.png)
 
@@ -24,7 +24,7 @@ npm install mapnik
 # Ensure the javascript has been built
 npm run build
 
-# Create a the data file
+# Create the data file
 node build/index.js -v create --input gebco_2020.nc --docker --output gebco/
 ```
 

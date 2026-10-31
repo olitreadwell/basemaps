@@ -88,7 +88,7 @@ describe('/@*', () => {
     const indexHtml = V('html', [
       V('head', [
         V('meta', { property: 'og:title', content: 'LINZ Basemaps' }),
-        V('meta', { property: 'og:image', content: '/basemaps-card.jepg' }),
+        V('meta', { property: 'og:image', content: '/basemaps-card.jpeg' }),
         V('meta', { name: 'viewport' }),
       ]),
     ]).toString();

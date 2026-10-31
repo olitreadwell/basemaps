@@ -2,8 +2,8 @@
 
 Basemaps has two main components to its configuration
 
-- Imagery - List of tiffs that make up a imagery set
-- TileSet - List of imagery or vector layers that make up a output layer.
+- Imagery - List of tiffs that make up an imagery set
+- TileSet - List of imagery or vector layers that make up an output layer.
 
 The configuration can be stored as individual AWS DynamoDB objects or can be stored as a bundled JSON object.
 

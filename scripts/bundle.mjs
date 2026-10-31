@@ -19,7 +19,7 @@ const DefaultEnvVars = {
   GIT_HASH: gitInfo.hash,
   GIT_VERSION: gitInfo.version,
   /**
-   * Github run id including the run attempt if there is one
+   * GitHub run id including the run attempt if there is one
    * @example "1658821493-3"
    */
   BUILD_ID: process.env.GITHUB_RUN_ID ? `${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT}` : '',

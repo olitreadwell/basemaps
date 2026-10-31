@@ -94,7 +94,7 @@ describe('/v1/health', () => {
     assert.equal(res.statusDescription, 'ok');
   });
 
-  it('Should return mis-match tile response', async () => {
+  it('Should return mismatch tile response', async () => {
     // Given ... a bad get tile response for second get tile
     const callback = sandbox.stub(TileXyzRaster, 'tile');
     callback.onCall(0).resolves(Response2);

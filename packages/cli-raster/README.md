@@ -4,7 +4,7 @@ CLI to retile imagery into a [Cloud Optimised Geotiffs (COG)](https://www.cogeo.
 
 ## Why ?
 
-LINZ gets most of it's imagery delivered as tiles in [NZTM2000](https://www.linz.govt.nz/guidance/geodetic-system/coordinate-systems-used-new-zealand/projections/new-zealand-transverse-mercator-2000-nztm2000) the imagery is tiled as rectangles against a tile grid such as the [1:5k](https://data.linz.govt.nz/layer/104691-nz-15k-tile-index/) or [1:1k](https://data.linz.govt.nz/layer/104692-nz-11k-tile-index/).
+LINZ gets most of its imagery delivered as tiles in [NZTM2000](https://www.linz.govt.nz/guidance/geodetic-system/coordinate-systems-used-new-zealand/projections/new-zealand-transverse-mercator-2000-nztm2000) the imagery is tiled as rectangles against a tile grid such as the [1:5k](https://data.linz.govt.nz/layer/104691-nz-15k-tile-index/) or [1:1k](https://data.linz.govt.nz/layer/104692-nz-11k-tile-index/).
 
 These grids are not designed for use in XYZ tiles services in [WebMercator/EPSG:3857](https://epsg.io/3857), If the tiles were converted directly to WebMercator there would be significant overlap between multiple source imagery tiffs and a output WebMercator tile. This would cause large overheads for basemaps to render tiles as it would need to fetch data from all of the tiffs inside of the output tile.
 
@@ -52,7 +52,7 @@ $ cogify --help
 
 ### Covering
 
-Create a tile covering for WebMeractorQuad from source imagery located in s3 and outputs the resulting configuration files into `./output/:projection/:imageryName/:id/collection.json`
+Create a tile covering for WebMercatorQuad from source imagery located in s3 and outputs the resulting configuration files into `./output/:projection/:imageryName/:id/collection.json`
 
 ```
 cogify cover --tile-matrix WebMercatorQuad s3://linz-imagery/new-zealand/north-island_2023_0.5m/rgb/2193/ --target ./output

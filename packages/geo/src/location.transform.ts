@@ -21,7 +21,7 @@ export function locationTransform(
   if (!isGoogle(tileMatrix) && !isGoogle(targetTileMatrix)) {
     throw new Error('Either tileMatrix or targetTileMatrix must be GoogleTms');
   }
-  // Transform the source to the the tile it would be rendered on
+  // Transform the source to the tile it would be rendered on
   const coords = Projection.get(tileMatrix).fromWgs84([location.lon, location.lat]);
   const point = tileMatrix.sourceToPixels(coords[0], coords[1], Math.round(location.zoom));
 

@@ -13,8 +13,8 @@ const tiffs = [tiffA, tiffB]; // @cogeotiff/core GeoTiff's
 const layers = await tiler.tile(tiffs, x, y, z);
 // Layers is now the positioning and scaling information for the tiffs
 
-import { TilerMaker } from '@basemaps/tiler-sharp';
-const maker = new TileMaker(256);
+import { TileMakerSharp } from '@basemaps/tiler-sharp';
+const maker = new TileMakerSharp(256);
 const data = await maker.compose(layers);
 console.log(data.buffer); // PNG image of the resulting layers
 ```

@@ -1,6 +1,6 @@
 # Deployment
 
-Deployments of Basemaps are managed with github actions.
+Deployments of Basemaps are managed with GitHub Actions.
 
 To trigger a deployment, make sure your branch is up to date and run the version bump script [version.bump.sh](https://github.com/linz/basemaps/blob/master/scripts/version.bump.sh).
 

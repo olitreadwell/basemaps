@@ -38,7 +38,7 @@ export class Projection {
   /** Transform coordinates to and from Wgs84 */
   private projection: Converter;
 
-  /** If the projection was definied with a projjson */
+  /** If the projection was defined with a projjson */
   definition?: PROJJSONDefinition;
 
   /**

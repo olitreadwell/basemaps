@@ -65,7 +65,7 @@ export interface TileJsonV3 {
 }
 
 export interface TileJsonVectorLayer {
-  /** A string value representing the the layer id. For added context, this is referred to as the name of the layer in the Mapbox Vector Tile spec.   */
+  /** A string value representing the layer id. For added context, this is referred to as the name of the layer in the Mapbox Vector Tile spec.   */
   id: string;
   /** A string representing a human-readable description of the entire layer's contents. */
   description?: string;

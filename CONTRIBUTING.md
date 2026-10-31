@@ -39,7 +39,7 @@ this repository is a monorepo for everything related to basemaps
 - [@basemaps/cli-raster](packages/cli-raster/) - CLI to re-tile imagery into a Cloud Optimised Geotiffs (COG)
 - [@basemaps/config](packages/config/) - Configurations for Basemaps system
 - [@basemaps/geo](packages/geo/) - Utility to work with QuadKeys, Tiles and Projections.
-- [@basemaps/lambda-analytics](packages/lambda-analytics/) - Generate analytics from CloudFront distribution statistics
+- [@basemaps/lambda-analytic-cloudfront](packages/lambda-analytic-cloudfront/) - Generate analytics from CloudFront distribution statistics
 - [@basemaps/lambda-tiler](packages/lambda-tiler/) - Lambda server for WMTS/XYZ map generation
 - [@basemaps/landing](packages/landing/) - The landing page for Basemaps
 - [@basemaps/server](packages/server/) - cli for WMTS/XYZ Tile server
