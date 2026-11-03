@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.23.0](https://github.com/linz/basemaps/compare/v8.22.1...v8.23.0) (2026-10-27)
+
+
+### Features
+
+* block based off viewer ip BM-1942 ([#3670](https://github.com/linz/basemaps/issues/3670)) ([0ba527d](https://github.com/linz/basemaps/commit/0ba527d76782d89d0f47db3e082075c2e901da17))
+* **lambda-tiler:** log viewer ip address from cloudfront ([#3668](https://github.com/linz/basemaps/issues/3668)) ([32f333a](https://github.com/linz/basemaps/commit/32f333a875b8461b378a77bdae9e7a5772264520))
+* **tiler-sharp:** add int16 support ([#3667](https://github.com/linz/basemaps/issues/3667)) ([411bb56](https://github.com/linz/basemaps/commit/411bb569bb5984bca93d12d8860e575044333363))
+
+## [8.22.1](https://github.com/linz/basemaps/compare/v8.22.0...v8.22.1) (2026-10-12)
+
+
+### Bug Fixes
+
+* broken multi-line tag replacement ([#3664](https://github.com/linz/basemaps/issues/3664)) ([b39b97b](https://github.com/linz/basemaps/commit/b39b97b13b1296af2e4527b96e49e8802535195e))
+
+## [8.22.0](https://github.com/linz/basemaps/compare/v8.21.0...v8.22.0) (2026-10-08)
+
+
+### Features
+
+* add infrastructure components BM-1902 ([#3663](https://github.com/linz/basemaps/issues/3663)) ([49e0232](https://github.com/linz/basemaps/commit/49e02324f1d6ef927af65380c43db2e49e5412f7))
+* add s3 lifecycle rules to reduce storage costs BM-1902 ([#3660](https://github.com/linz/basemaps/issues/3660)) ([d346d63](https://github.com/linz/basemaps/commit/d346d63ff12dd042ade1300ee332d5b665613168))
+* allow direct access to s3 source imagery BM-1877 ([#3658](https://github.com/linz/basemaps/issues/3658)) ([1e9db28](https://github.com/linz/basemaps/commit/1e9db2803b517a4550c4aa612c3c83e984957c60))
+* cloudfront distro upgrade BM-1825 ([#3645](https://github.com/linz/basemaps/issues/3645)) ([46291b8](https://github.com/linz/basemaps/commit/46291b8350191a901377ee7e346b3a704a73d08a))
+* improve smoke tests ([#3646](https://github.com/linz/basemaps/issues/3646)) ([e4e9a22](https://github.com/linz/basemaps/commit/e4e9a22af30644926c06352bba8697e6e9c0382e))
+
+
+### Bug Fixes
+
+* abort upload cannot be used with objectSizeGreater ([#3661](https://github.com/linz/basemaps/issues/3661)) ([956f1b9](https://github.com/linz/basemaps/commit/956f1b98442ae492aea8a67113089fe09b7436b3))
+* cleanup broken s3 to cloudfront infra BM-1877 ([#3659](https://github.com/linz/basemaps/issues/3659)) ([fc77e1e](https://github.com/linz/basemaps/commit/fc77e1e5d7e34b365d53a6d3b2014df5b4954abc))
+* include webacl id if the cloudfront is on a pay monthly plan ([#3648](https://github.com/linz/basemaps/issues/3648)) ([0cb573c](https://github.com/linz/basemaps/commit/0cb573c44c460747e4f88d171e7c776bb5ebe2a1))
+* log api key BM-1854 ([#3655](https://github.com/linz/basemaps/issues/3655)) ([be7173e](https://github.com/linz/basemaps/commit/be7173e12ab72b6882a2120cb5cdf027dccae6f3))
+* vector tile links need i=topographic to show style.json ([#3625](https://github.com/linz/basemaps/issues/3625)) ([03a0ad7](https://github.com/linz/basemaps/commit/03a0ad7409bc949972763949fa1ce009daf5cd5f))
+
 ## [8.21.0](https://github.com/linz/basemaps/compare/v8.20.1...v8.21.0) (2026-07-02)
 
 

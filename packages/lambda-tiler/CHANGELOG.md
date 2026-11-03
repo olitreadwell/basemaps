@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.14.0](https://github.com/linz/basemaps/compare/lambda-tiler-v8.13.4...lambda-tiler-v8.14.0) (2026-10-27)
+
+
+### Features
+
+* block based off viewer ip BM-1942 ([#3670](https://github.com/linz/basemaps/issues/3670)) ([0ba527d](https://github.com/linz/basemaps/commit/0ba527d76782d89d0f47db3e082075c2e901da17))
+* **lambda-tiler:** log viewer ip address from cloudfront ([#3668](https://github.com/linz/basemaps/issues/3668)) ([32f333a](https://github.com/linz/basemaps/commit/32f333a875b8461b378a77bdae9e7a5772264520))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @basemaps/config-loader bumped from ^8.12.5 to ^8.12.6
+    * @basemaps/shared bumped from ^8.9.9 to ^8.10.0
+    * @basemaps/tiler-sharp bumped from ^8.11.6 to ^8.12.0
+
+## [8.13.4](https://github.com/linz/basemaps/compare/lambda-tiler-v8.13.3...lambda-tiler-v8.13.4) (2026-10-12)
+
+
+### Bug Fixes
+
+* broken multi-line tag replacement ([#3664](https://github.com/linz/basemaps/issues/3664)) ([b39b97b](https://github.com/linz/basemaps/commit/b39b97b13b1296af2e4527b96e49e8802535195e))
+
+## [8.13.3](https://github.com/linz/basemaps/compare/lambda-tiler-v8.13.2...lambda-tiler-v8.13.3) (2026-10-08)
+
+
+### Bug Fixes
+
+* log api key BM-1854 ([#3655](https://github.com/linz/basemaps/issues/3655)) ([be7173e](https://github.com/linz/basemaps/commit/be7173e12ab72b6882a2120cb5cdf027dccae6f3))
+
 ## [8.13.2](https://github.com/linz/basemaps/compare/lambda-tiler-v8.13.1...lambda-tiler-v8.13.2) (2026-05-17)
 
 

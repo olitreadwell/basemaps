@@ -19,6 +19,7 @@ import { wmtsCapabilitiesGet } from './routes/tile.wmts.js';
 import { tileXyzGet } from './routes/tile.xyz.js';
 import { versionGet } from './routes/version.js';
 import { NotFound } from './util/response.js';
+import { Validate } from './util/validate.js';
 
 export const handler = lf.http(LogConfig.get());
 
@@ -49,6 +50,8 @@ handler.router.hook('request', (req) => {
   randomTrace(req);
 
   req.set('name', 'LambdaTiler');
+
+  Validate.clientIp(req);
 
   req.log.debug({ ...req.logContext }, 'Lambda:Start');
 });

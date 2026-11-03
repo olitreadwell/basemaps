@@ -7,7 +7,7 @@ import s3, { HttpMethods } from 'aws-cdk-lib/aws-s3';
 import { StringParameter } from 'aws-cdk-lib/aws-ssm';
 import type { Construct } from 'constructs';
 
-import { getConfig } from '../config.js';
+import { BaseMapsRegion, getConfig } from '../config.js';
 import { ParametersEdgeKeys } from '../parameters.js';
 
 export interface EdgeStackProps extends cdk.StackProps {
@@ -17,6 +17,20 @@ export interface EdgeStackProps extends cdk.StackProps {
   /** Is the lambda deployed as a function url somewhere */
   lambdaUrl?: string;
 }
+
+const commonBehaviours = {
+  allowedMethods: cf.AllowedMethods.ALLOW_ALL,
+  originRequestPolicy: cf.OriginRequestPolicy.ALL_VIEWER_EXCEPT_HOST_HEADER,
+  viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+} as const;
+
+const commonBehavioursS3 = {
+  allowedMethods: cf.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,
+  cachePolicy: cf.CachePolicy.CACHING_OPTIMIZED,
+  originRequestPolicy: cf.OriginRequestPolicy.CORS_S3_ORIGIN,
+  responseHeadersPolicy: cf.ResponseHeadersPolicy.CORS_ALLOW_ALL_ORIGINS_WITH_PREFLIGHT,
+  viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+} as const;
 
 /**
  * Edge infrastructure
@@ -34,6 +48,7 @@ export class EdgeStack extends cdk.Stack {
 
     const config = getConfig();
     const s3BucketSource = new s3.Bucket(this, 'StaticBucket', {
+      lifecycleRules: [{ id: 'abort-incomplete-multipart', abortIncompleteMultipartUploadAfter: cdk.Duration.days(3) }],
       cors: [
         {
           allowedOrigins: ['*'],
@@ -48,9 +63,33 @@ export class EdgeStack extends cdk.Stack {
     const acmCert = Certificate.fromCertificateArn(this, 'Cert', props.cloudfrontCertificateArn);
     new cdk.CfnOutput(this, 'CloudFrontPublicDomain', { value: config.CloudFrontDns.join(', ') });
 
-    this.logBucket = new s3.Bucket(this, 'EdgeLogBucket');
+    this.logBucket = new s3.Bucket(this, 'EdgeLogBucket', {
+      versioned: true,
+      lifecycleRules: [
+        { id: 'abort-incomplete-multipart', abortIncompleteMultipartUploadAfter: cdk.Duration.days(3) },
+        {
+          id: 'archive-logs',
+          // lambda-analytic-cloudfront only reads the last 28 days of logs, older logs are kept for historic analysis
+          transitions: [
+            { storageClass: s3.StorageClass.GLACIER_INSTANT_RETRIEVAL, transitionAfter: cdk.Duration.days(30) },
+          ],
+          noncurrentVersionExpiration: cdk.Duration.days(1),
+          objectSizeGreaterThan: cdk.Size.kibibytes(128).toBytes(),
+        },
+        { id: 'expire-delete-markers', expiredObjectDeleteMarker: true },
+      ],
+    });
 
     const additionalBehaviors: Record<string, cf.BehaviorOptions> = {};
+
+    const sourceBucket = s3.Bucket.fromBucketAttributes(this, 'SourceBucket', {
+      bucketArn: 'arn:aws:s3:::linz-basemaps',
+      region: BaseMapsRegion,
+    });
+    const sourceBucketOac = origins.S3BucketOrigin.withOriginAccessControl(sourceBucket);
+    additionalBehaviors['/2193/*'] = { ...commonBehavioursS3, origin: sourceBucketOac };
+    additionalBehaviors['/3857/*'] = { ...commonBehavioursS3, origin: sourceBucketOac };
+    additionalBehaviors['/vector/*'] = { ...commonBehavioursS3, origin: sourceBucketOac };
 
     if (props.lambdaUrl) {
       const trimmedUrl = new URL(props.lambdaUrl); // LambdaURLS include https:// and a trailing /
@@ -75,18 +114,14 @@ export class EdgeStack extends cdk.Stack {
 
       additionalBehaviors['/v1*'] = {
         origin: lambdaOrigin,
-        viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
-        allowedMethods: cf.AllowedMethods.ALLOW_ALL,
         cachePolicy: v1CachePolicy,
-        originRequestPolicy: cf.OriginRequestPolicy.ALL_VIEWER_EXCEPT_HOST_HEADER,
+        ...commonBehaviours,
       };
 
       additionalBehaviors['/@*'] = {
         origin: lambdaOrigin,
-        viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
-        allowedMethods: cf.AllowedMethods.ALLOW_ALL,
         cachePolicy: atCachePolicy,
-        originRequestPolicy: cf.OriginRequestPolicy.ALL_VIEWER_EXCEPT_HOST_HEADER,
+        ...commonBehaviours,
       };
     }
 
