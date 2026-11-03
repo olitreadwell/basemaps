@@ -165,6 +165,22 @@ button {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
 
+/** Show a clear ring when the switcher is reached by keyboard */
+.map-switcher:focus-visible {
+  outline: 3px solid #00425d;
+  outline-offset: 2px;
+}
+
+/** Menu toggle is a real button; strip the native chrome so the icon looks unchanged */
+.menu-toggle-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
 .lui-checkbox-container label {
   margin-left: 10px;
   margin-top: 0px;
