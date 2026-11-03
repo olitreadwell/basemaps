@@ -289,7 +289,7 @@ describe('config.diff', () => {
       const before = await stubLoadConfig(t, 'before://config/');
       const tsAfter = structuredClone(TsAerial);
 
-      // Remove the first layer then store it as a seperate tile set config file
+      // Remove the first layer then store it as a separate tile set config file
       const removed = tsAfter.layers.shift() as TileSetConfigSchemaLayer; // Remove the first layer
       await fsa.write(fsa.toUrl('after://config/tileset/aerial.json'), JSON.stringify(tsAfter));
       await fsa.write(

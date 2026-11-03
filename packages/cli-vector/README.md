@@ -7,5 +7,5 @@ CLI to create vector mbtiles for topographic map.
 Extract and load schema.json config files then prepare tasks for the next step to create mbtiles
 
 ```bash
-node build/bin.js extract --path schema/ --cache s3://linz-basemaps-staging/vector/cache/
+node build/bin.js extract --schema schema/ --cache s3://linz-basemaps-staging/vector/cache/
 ```

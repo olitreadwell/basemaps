@@ -36,7 +36,7 @@ export function handleLayerWater(
   if (orientatn != null) {
     const direction = orientatn;
     feature.properties['direction'] = direction;
-    logger.trace({ direction }, 'new/overidden tags');
+    logger.trace({ direction }, 'new/overridden tags');
   }
 
   logger.trace({}, 'HandleWaterPolygons:End');
@@ -59,7 +59,7 @@ function handleKindWater(feature: VectorGeoFeature, logger: LogType): VectorGeoF
     // inherit the lake's name from the feature's 'grp_name' property
     const grpName = feature.properties['grp_name'];
     feature.properties['name'] = grpName;
-    logger.trace({ name: grpName }, 'new/overidden tags');
+    logger.trace({ name: grpName }, 'new/overridden tags');
   }
 
   // determine if the lake is large
@@ -93,7 +93,7 @@ function handleKindRiver(feature: VectorGeoFeature, options: VectorCreationOptio
     if (name === '' && feature.tippecanoe.minzoom < 11) {
       const minzoom = 11;
       feature.tippecanoe.minzoom = minzoom;
-      logger.trace({ minzoom }, 'overidden styles');
+      logger.trace({ minzoom }, 'overridden styles');
     }
   }
 

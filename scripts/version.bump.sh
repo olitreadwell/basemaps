@@ -12,7 +12,7 @@ npx lerna changed -a --long
 
 npx lerna version --conventional-commits --no-push -m 'release: %s' 
 
-# Lerna creates a miss formated json file on commit
+# Lerna creates a miss formatted json file on commit
 npm run lint
 git commit -a --amend --no-edit
 

@@ -88,7 +88,7 @@ function approxDegreeToMeter(deg: number): number {
  *
  * if no existing bands are found return the new bands
  *
- * This is not a exhaustive comparision
+ * This is not an exhaustive comparison
  *
  * @param tiff
  * @param existingBands

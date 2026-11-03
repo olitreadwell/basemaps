@@ -1,6 +1,6 @@
 # Working with Vector Tiles
 
-Vector tiles are a modern approach to delivering map data that offers significant advantages over traditional raster tiles. Unlike raster tiles, which are pre-rendered images, vector tiles contain raw geographic data that you can styled dynamically client-side. This means you can customise the colors, labels, and visibility of features without requesting new tiles from the server.
+Vector tiles are a modern approach to delivering map data that offers significant advantages over traditional raster tiles. Unlike raster tiles, which are pre-rendered images, vector tiles contain raw geographic data that you can style dynamically client-side. This means you can customise the colors, labels, and visibility of features without requesting new tiles from the server.
 
 ## Why use Vector Tiles?
 

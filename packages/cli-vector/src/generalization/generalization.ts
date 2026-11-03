@@ -122,7 +122,7 @@ function tag(
     return null;
   }
 
-  // Skip features that maxzoom is less than minzoom, this could happened after simplification and special tags on zoom levels
+  // Skip features that maxzoom is less than minzoom, this could happen after simplification and special tags on zoom levels
   if (modifiedFeature.tippecanoe.maxzoom < modifiedFeature.tippecanoe.minzoom) return null;
 
   // Transform zoom level for NZTM2000Quad

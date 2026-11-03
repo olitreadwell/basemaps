@@ -76,7 +76,7 @@ Cons:
 
 ## 404 Tile Not found
 
-Return a error state saying the tile is not found
+Return an error state saying the tile is not found
 
 - ❌ Is an error state
 - ❌ Not always cached: browsers / CDNs often do not cache 404 responses

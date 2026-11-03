@@ -1,6 +1,6 @@
 # COG Quality
 
-## Resampling with reprojecton and overview creation
+## Resampling with reprojection and overview creation
 
 creating COGs using a command very similar to
 
@@ -52,7 +52,7 @@ Creates weird artifacts around the edges
 
 ### Bilinear
 
-looks blury
+looks blurry
 
 ![Bilinear Overview](./static/quality__i6.bilinear.webp)
 
@@ -66,7 +66,7 @@ Here are some higher resolution aerial imagery image 0 with different resampling
 
 ### Lanczos
 
-Creates a jaggeredness, look at the street markings and the edges of the buildings
+Creates a jaggedness, look at the street markings and the edges of the buildings
 
 ![Lanczos](./static/quality__005_006_0_lanczos.webp)
 

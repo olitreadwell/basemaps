@@ -4,7 +4,7 @@
 
 ## Process
 
-Download the lastest [Gebco gridded bathymetry data](https://www.gebco.net/data_and_products/gridded_bathymetry_data/).
+Download the latest [Gebco gridded bathymetry data](https://www.gebco.net/data_and_products/gridded_bathymetry_data/).
 
 Build VRT first with the Gdal command.
 

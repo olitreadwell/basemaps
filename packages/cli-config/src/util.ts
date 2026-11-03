@@ -10,7 +10,7 @@ import { fsa, LogConfig } from '@basemaps/shared';
 import { CliId } from '@basemaps/shared/build/cli/info.js';
 import slugify from 'slugify';
 
-// Cloudfront has to be defined in us-east-1
+// CloudFront has to be defined in us-east-1
 const cloudFormationClient = new CloudFormationClient({ region: 'us-east-1' });
 const cloudFrontClient = new CloudFrontClient({ region: 'us-east-1' });
 const s3Client = new S3Client({ region: 'us-east-1' });

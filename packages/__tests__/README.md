@@ -14,7 +14,7 @@ o('should be near', () => {
 
 ## TestTiffs
 
-Two RGB Testing tiffs are provided for Google (epsg:3857) and NZTM2000 (epgs:2193) projections
+Two RGB Testing tiffs are provided for Google (epsg:3857) and NZTM2000 (epsg:2193) projections
 
 ```typescript
 import { TestTiff } from '@basemaps/test';

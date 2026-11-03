@@ -72,7 +72,7 @@ export class TileMakerSharp implements TileMaker {
   /**
    * Convert the image to the correct output format then output it into a buffer
    * @param format output image format
-   * @param pieline Image pipeline to convert
+   * @param pipeline Image pipeline to convert
    *
    * @throws if unsupported image format is used
    * @returns image as the supplied image format

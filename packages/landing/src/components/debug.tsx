@@ -343,7 +343,7 @@ export class Debug extends Component<{ map: maplibregl.Map }, DebugState> {
     const hillShadeSourceId = `${HillShadePrefix}${sourceId}`;
     if (currentLayer?.source === hillShadeSourceId) return;
 
-    // Hillshading from an existing raster-dem source gives very mixed results and looks very blury
+    // Hillshading from an existing raster-dem source gives very mixed results and looks very blurry
     // so add a new source layer to generate from
     const existingSource = map.getSource(hillShadeSourceId);
     if (existingSource == null) {

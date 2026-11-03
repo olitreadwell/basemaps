@@ -2,7 +2,7 @@ import { createRequire } from 'module';
 import path from 'path';
 import { URL } from 'url';
 
-// Fastfiy uses a lot of floating promises
+// Fastify uses a lot of floating promises
 /* eslint-disable @typescript-eslint/no-floating-promises */
 import { handler } from '@basemaps/lambda-tiler';
 import type { LogType } from '@basemaps/shared';

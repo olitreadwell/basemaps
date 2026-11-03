@@ -33,7 +33,7 @@ export class MapAttributionState {
   }
 
   /**
-   * Load the attribution fo all layers
+   * Load the attribution for all layers
    * @returns
    */
   getAll(): Promise<Attribution | null> {

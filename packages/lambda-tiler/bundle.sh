@@ -7,5 +7,5 @@ cd dist
 ../scripts/create.deployment.package.mjs
 # Make the new package a commonjs module
 cp -r ../static .
-# @see https://sharp.pixelplumbing.com/en/stable/install/#aws-lambda
+# @see https://sharp.pixelplumbing.com/install#aws-lambda
 npm install --cpu=arm64 --arch=arm64 --platform=linux --omit=dev

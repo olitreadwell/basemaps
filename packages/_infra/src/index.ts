@@ -36,7 +36,7 @@ async function main(): Promise<void> {
 
   const config = getConfig();
 
-  // Cloudfront certs have to be deployed into us-east-1
+  // CloudFront certs have to be deployed into us-east-1
   const cloudfrontCertificateArn = await findCertForDomain('us-east-1', config.CloudFrontDns[0]);
   if (cloudfrontCertificateArn == null) {
     console.error('Unable to find CloudFront Certificate');

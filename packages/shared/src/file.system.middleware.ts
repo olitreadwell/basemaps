@@ -1,6 +1,6 @@
 import type { FinalizeRequestMiddleware, MetadataBearer } from '@smithy/types';
 
-/** Force fully qualifed domain names (FQDN) for s3 requests to save DNS lookups */
+/** Force fully qualified domain names (FQDN) for s3 requests to save DNS lookups */
 interface Fqdn {
   /**
    * Should S3 requests be converted to Fully Qualified domains (FQDN)

@@ -44,7 +44,7 @@ export async function main(req: LambdaRequest): Promise<void> {
     'log:index:start',
   );
 
-  // Limit hours to be processed 5 at a time and log files to 5 at a time, which gives upto 25 logs files concurrency
+  // Limit hours to be processed 5 at a time and log files to 5 at a time, which gives up to 25 logs files concurrency
   // as often hours are skipped
   const hourQ = pLimit(5);
   const fileQ = pLimit(5);

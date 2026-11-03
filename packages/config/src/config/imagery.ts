@@ -8,7 +8,7 @@ export const ConfigImageryVersion = 2;
 /**
  * Taken from tiff's SampleFormat
  *
- * @link https://www.awaresystems.be/imaging/tiff/tifftags/sampleformat.html
+ * @link https://web.archive.org/web/2023/https://www.awaresystems.be/imaging/tiff/tifftags/sampleformat.html
  */
 export type ImageryDataType = 'uint' | 'int' | 'float' | 'void' | 'unknown' | 'cint' | 'cfloat';
 

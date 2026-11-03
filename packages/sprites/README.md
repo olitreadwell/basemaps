@@ -52,7 +52,7 @@ basemaps-sprites --extension .png ./config/sprites/topographic
 basemaps-sprites --extension .png --extension .svg --extension .webp ./config/sprites/topographic
 ```
 
-# Refference of the test sprites in the unit tests.
+# Reference of the test sprites in the unit tests.
 
 The following test sprites come from [openstreetmap-americana](https://github.com/zelonewolf/openstreetmap-americana)
 

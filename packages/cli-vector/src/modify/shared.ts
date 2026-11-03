@@ -27,13 +27,13 @@ export function handleRoadFeature(
     feature.properties['kind'] = kind;
     const ref = highwayNum;
     feature.properties['ref'] = ref;
-    logger.trace({ kind, ref }, 'new/overidden tags');
+    logger.trace({ kind, ref }, 'new/overridden tags');
 
     // Keep the highways with names below zoom 8.
     if (feature.tippecanoe.minzoom < 8) {
       const minzoom = MajorHighWays.has(highwayNum) ? feature.tippecanoe.maxzoom : 8;
       feature.tippecanoe.minzoom = minzoom;
-      logger.trace({ minzoom }, 'overidden styles');
+      logger.trace({ minzoom }, 'overridden styles');
     }
 
     // return feature
@@ -46,14 +46,14 @@ export function handleRoadFeature(
     // append/override tags
     const kind = laneCount >= 4 ? 'primary' : 'secondary';
     feature.properties['kind'] = kind;
-    logger.trace({ kind }, 'new/overidden tags');
+    logger.trace({ kind }, 'new/overridden tags');
   }
 
   // override styles
   if (options.layer.style.minZoom < 10) {
     const minzoom = 10;
     feature.tippecanoe.minzoom = minzoom;
-    logger.trace({ minzoom }, 'overidden styles');
+    logger.trace({ minzoom }, 'overridden styles');
   }
 
   // return feature

@@ -17,7 +17,7 @@ While linz/basemaps is public, its primary reason is to [work in the open](https
 - AWS S3 - COG Storage location
 - AWS Lambda function - Tile Server - [@basemaps/lambda-tiler](../packages/lambda-tiler/README.md)
 - AWS Cloudfront - Content distribution and tile cache
-- [linz/basemaps-config](https://github.com/linz/basemaps) - Basemaps configuration
+- [linz/basemaps-config](https://github.com/linz/basemaps-config) - Basemaps configuration
 
 ### Imagery Tile Requests
 
@@ -26,7 +26,7 @@ A tile request flows a number of basemaps packages:
 Given a request `/v1/tiles/aerial/WebMercatorQuad/6/1/40.webp`,
 Breaking down this request url `lambda-tiler` needs to serve a `webp` image that for the tile `{z: 6, x: 1, y: 40}` from the `WebMercatorQuad` tile matrix from the tile set named `aerial` in the default configuration.
 
-Which will then utlize the following packages
+Which will then utilise the following packages
 
 - [@basemaps/config](../packages/config/README.md) - Load configuration ([`?config`](./configuration.md))
 - [@basemaps/lambda-tiler](../packages/lambda-tiler/README.md) Convert tile XYZ into output coordinates bounding box
@@ -52,7 +52,7 @@ Vector tiles are pre-rendered as [Mapbox Vector Tiles](https://docs.mapbox.com/d
 
 To efficiently serve aerial imagery to huge number of consumers, it should be optimised into a format that makes it easy to serve. All of LINZ's imagery is stored as [Cloud Optimised GeoTIFFs (COGs)](https://www.cogeo.org/), and to ensure they are served as efficiently as possible some additional processing steps are generally pre-applied to the imagery.
 
-- **Reprojection**: reprojecting the imagery into common consumption formats (EPSG:3857 and EPSG:2193) will greatly reduce the amount of load and complexity of the basemaps service service
+- **Reprojection**: reprojecting the imagery into common consumption formats (EPSG:3857 and EPSG:2193) will greatly reduce the amount of load and complexity of the basemaps service
 - **Tile Alignment**: By aligning the COGs to the output XYZ tile grid
 - **Additional overviews**: It is hard to fetch data from 1,000s of COGs to create a single tile, so we create additional overviews up to z0.
 

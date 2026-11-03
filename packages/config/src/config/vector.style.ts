@@ -63,7 +63,7 @@ export interface Sky {
   'fog-ground-blend'?: number | unknown[];
   /** How to blend the fog color and the horizon color. Optional number in range [0, 1]. Defaults to 0.8. */
   'horizon-fog-blend'?: number | unknown[];
-  /** How to blend the the sky color and the horizon color. Optional number in range [0, 1]. Defaults to 0.8. */
+  /** How to blend the sky color and the horizon color. Optional number in range [0, 1]. Defaults to 0.8. */
   'sky-horizon-blend'?: number | unknown[];
   /** How to blend the atmosphere. Optional number in range [0, 1]. Defaults to 0.8. */
   'atmosphere-blend'?: number | unknown[];
